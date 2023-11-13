@@ -1,7 +1,7 @@
 // Описаний в документації
 import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
-import "flatpickr/dist/flatpickr.min.css";
+// import "flatpickr/dist/flatpickr.min.css";
 
 const btnStart = document.querySelector('button[data-start]');
 const myInput = document.querySelector("#datetime-picker");
@@ -12,7 +12,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    timeSelected = selectedDates[0].getTime();
+    const timeSelected = selectedDates[0].getTime();
     if (timeSelected < Date.now()) {
       window.alert("Please choose a date in the future")
     } else {
